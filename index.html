@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#4a3a82">
+<title>Good morning ☀️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#4a2c4d;--pink:#ff6f9f;--peach:#ff9a8b;--rail:#e8e0ee;--top:#141040;--mid:#4a3a82;--bot:#e98a9d;--h1:#2a1f4d;--h2:#3a2a60;--sunc:#ff6a4d}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font:600 1rem/1.5 'Nunito','Segoe UI',system-ui,sans-serif;color:var(--plum);overflow-x:hidden}
+.emo,.fx,.emoji-btn,.mface,.mwx{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif}
+#sky{position:fixed;inset:0;z-index:-4;background:linear-gradient(180deg,var(--top),var(--mid) 55%,var(--bot))}
+#stars{position:fixed;inset:0;z-index:-3}
+#stars i{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;animation:tw 3s infinite alternate}
+@keyframes tw{to{opacity:.15}}
+#sun{position:fixed;left:50%;top:0;width:150px;height:150px;margin-left:-75px;border-radius:50%;z-index:-2;background:radial-gradient(circle at 40% 35%,#fffbd0,var(--sunc) 70%);box-shadow:0 0 70px 30px var(--sunc)}
+#sun:after{content:"";position:absolute;inset:-120px;border-radius:50%;background:radial-gradient(circle,rgba(255,220,150,.5),transparent 65%);animation:glow 5s ease-in-out infinite alternate}
+@keyframes glow{to{transform:scale(1.15)}}
+#hills{position:fixed;left:0;bottom:0;width:100%;height:24vh;z-index:-1}
+.stage{position:relative;max-width:1100px;margin:0 auto;min-height:100vh;min-height:100svh;padding:76px 16px 36px;display:grid;grid-template-columns:minmax(150px,230px) minmax(0,560px) minmax(150px,230px);justify-content:center;gap:18px;align-content:center}
+.side{border-radius:30px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;box-shadow:0 10px 30px rgba(40,20,80,.25)}
+.boy{background:linear-gradient(165deg,#b5dbff,#e6f3ff 55%,#fff)}
+.girl{background:linear-gradient(165deg,#ffc2d9,#ffe4ee 55%,#fff)}
+.avatar{width:100%;max-width:220px;display:block;animation:bob 4s ease-in-out infinite}
+.girl .avatar{animation-delay:-2s}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.eyes{transform-box:fill-box;transform-origin:center;animation:blink 4.5s infinite}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+.td{animation:tdot 1.2s infinite}.td:nth-child(2){animation-delay:.2s}.td:nth-child(3){animation-delay:.4s}
+@keyframes tdot{50%{opacity:.2}}
+#link{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:3}
+#lp{fill:none;stroke:#ff7fa8;stroke-width:3;stroke-linecap:round;stroke-dasharray:1 9;animation:dash 1s linear infinite;filter:drop-shadow(0 0 4px #fff)}
+@keyframes dash{to{stroke-dashoffset:-10}}
+#link text{font-size:18px;text-anchor:middle;dominant-baseline:middle}
+.card{background:rgba(255,251,249,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:30px;box-shadow:0 14px 40px rgba(40,20,80,.3);padding:28px 24px 18px;display:flex;flex-direction:column;min-height:400px;z-index:2}
+#panel{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;transition:opacity .35s,transform .35s}
+#panel.out{opacity:0;transform:translateY(12px) scale(.98)}
+#panel.in{animation:pin .5s ease}
+@keyframes pin{from{opacity:0;transform:translateY(14px)}}
+#dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
+#dots i{width:9px;height:9px;border-radius:50%;background:var(--rail);transition:.4s}
+#dots i.on{background:var(--pink);transform:scale(1.25)}
+h2{font:500 1.5rem/1.3 'Fredoka',sans-serif;margin:0}
+.love{font:500 1.45rem/1.4 'Fredoka',sans-serif;margin:0}
+.big-emo{font-size:3.4rem;line-height:1}
+.hint{margin:0;font-size:.95rem;opacity:.7}
+.btn{font:500 1.2rem 'Fredoka',sans-serif;color:#fff;border:0;border-radius:99px;padding:13px 34px;background:linear-gradient(135deg,var(--pink),var(--peach));box-shadow:0 6px 0 #d24f7e,0 10px 18px rgba(210,79,126,.35);cursor:pointer;transition:transform .12s}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 #d24f7e}
+.btn:disabled{opacity:.6}
+:focus-visible{outline:3px solid #7a5cff;outline-offset:3px}
+.emoji-btn{font-size:4rem;line-height:1;background:#fff;border:0;border-radius:50%;width:104px;height:104px;cursor:pointer;box-shadow:0 8px 22px rgba(255,111,159,.45)}
+.blink{animation:blinkb 1.1s ease-in-out infinite}
+@keyframes blinkb{0%,100%{transform:scale(1);opacity:1;box-shadow:0 0 0 0 rgba(255,111,159,.6)}50%{transform:scale(1.14);opacity:.45;box-shadow:0 0 0 16px rgba(255,111,159,0)}}
+.meter{position:relative;width:100%;padding-top:66px}
+#bub{position:absolute;top:0;width:56px;height:56px;margin-left:-28px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:1.9rem;box-shadow:0 6px 16px rgba(0,0,0,.18);transition:left .05s}
+#bub:after{content:"";position:absolute;bottom:-6px;left:50%;margin-left:-7px;border:7px solid transparent;border-bottom:0;border-top-color:#fff}
+#bub.pop{animation:pop .3s}
+@keyframes pop{50%{transform:scale(1.25)}}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:34px;background:none;margin:0;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:16px;border-radius:99px;background:var(--track,var(--rail))}
+input[type=range]::-moz-range-track{height:16px;border-radius:99px;background:var(--track,var(--rail))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;border-radius:50%;margin-top:-9px;background:var(--c,#cbbfe0);border:4px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--c,#cbbfe0);border:4px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+.scale{display:flex;justify-content:space-between;font-size:.85rem;opacity:.65}
+.read{font:500 1.15rem 'Fredoka',sans-serif;min-height:1.6em}.read b{font-size:1.6rem;color:var(--c,var(--plum))}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%}
+.mood{position:relative;border:0;border-radius:22px;padding:16px 8px 12px;cursor:pointer;color:var(--plum);font:500 1rem 'Fredoka',sans-serif;box-shadow:0 5px 0 rgba(0,0,0,.12);transition:transform .15s}
+.mood:hover{transform:translateY(-4px) rotate(-1.5deg)}
+.mood:nth-child(1){background:linear-gradient(#cdd8ea,#e7ecf5)}.mood:nth-child(2){background:linear-gradient(#e6e2f0,#f4f1f8)}.mood:nth-child(3){background:linear-gradient(#ffe9a8,#fff4cf)}.mood:nth-child(4){background:linear-gradient(#ffc6dc,#ffe3a8)}
+.mface{display:block;font-size:2.8rem;line-height:1.1}.mwx{position:absolute;top:6px;right:10px;font-size:1.3rem}
+.opts{display:flex;flex-direction:column;gap:10px;width:100%}
+.opt{font:500 1.1rem 'Fredoka',sans-serif;color:var(--plum);background:#fff;border:3px solid #ffc2d9;border-radius:18px;padding:11px 14px;cursor:pointer;transition:.15s}
+.opt:hover,.opt.sel{background:#ffe3ee;border-color:var(--pink);transform:scale(1.02)}
+textarea{width:100%;font:600 1.1rem 'Nunito',sans-serif;color:var(--plum);border:3px solid #ffc2d9;border-radius:18px;padding:12px;resize:none;background:#fff}
+textarea.shake,.shake{animation:shk .4s}
+@keyframes shk{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.me{min-height:3.2rem;max-width:90%;align-self:flex-end;background:linear-gradient(135deg,#ff8fb5,#ffa98f);color:#fff;border-radius:22px 22px 4px 22px;padding:10px 18px;font:500 1.3rem 'Fredoka',sans-serif;word-break:break-word;transition:.3s}
+.me:after{content:"|";opacity:.7;animation:tw .5s infinite alternate}
+.me.wrong{background:#9a8fb0;animation:shk .4s 2}
+.me.big{font-size:2.6rem;letter-spacing:4px;transform:rotate(-3deg)}
+.status{min-height:3em;font-size:1rem;opacity:.85}
+.final{text-align:left;font:500 1.04rem/1.6 'Fredoka',sans-serif;display:flex;flex-direction:column;gap:10px}
+.final p{margin:0;opacity:0;animation:pin 1s forwards}
+.fx{position:fixed;z-index:60;pointer-events:none;font-size:var(--s,22px);animation:up 1.6s ease-out forwards}
+@keyframes up{0%{opacity:0;transform:scale(.6)}15%{opacity:1}100%{opacity:0;transform:translate(var(--dx),-130px) scale(1.2) rotate(var(--r))}}
+@media(max-width:860px){.stage{grid-template-columns:1fr 1fr;grid-template-areas:"b g" "c c";gap:12px;padding-top:84px}.boy{grid-area:b;height:200px}.girl{grid-area:g;height:200px}.card{grid-area:c}.avatar{max-width:165px}h2{font-size:1.35rem}.love{font-size:1.25rem}}
+@media(prefers-reduced-motion:reduce){.avatar,.eyes,#sun:after,#lp{animation:none}}
+</style>
+</head>
+<body>
+<div id="sky"></div><div id="stars"></div><div id="sun"></div>
+<svg id="hills" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0 14 Q25 2 50 12 T100 8 V30 H0Z" style="fill:var(--h2)"/><path d="M0 22 Q30 10 60 20 T100 16 V30 H0Z" style="fill:var(--h1)"/></svg>
+<noscript><p style="color:#fff;text-align:center;padding:40px">Please turn on JavaScript to see your surprise 💕</p></noscript>
+
+<main class="stage" id="stage">
+<svg id="link" aria-hidden="true"><path id="lp"/></svg>
+
+<section class="side boy">
+<svg class="avatar" viewBox="0 0 220 270" role="img" aria-label="A smiling guy texting">
+<defs><linearGradient id="sB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#d6e9ff"/></linearGradient></defs>
+<rect x="73" y="158" width="24" height="40" rx="10" fill="#e9b996"/>
+<path d="M10 272C10 215 40 192 85 192S160 215 160 272Z" fill="#fff" stroke="#cfe0f2" stroke-width="3"/>
+<path d="M130 208L160 198" stroke="#cfe0f2" stroke-width="27" stroke-linecap="round"/><path d="M130 208L160 198" stroke="#fff" stroke-width="23" stroke-linecap="round"/>
+<circle cx="37" cy="118" r="9" fill="#f2c9a5"/><circle cx="133" cy="118" r="9" fill="#f2c9a5"/>
+<ellipse cx="85" cy="112" rx="48" ry="50" fill="#f6d2b0"/>
+<path d="M39 118C39 168 62 172 85 172S131 168 131 118C124 138 112 144 85 144S46 138 39 118Z" fill="#24222a"/>
+<path d="M68 142Q77 136 85 141Q93 136 102 142Q93 146 85 144Q77 146 68 142Z" fill="#24222a"/>
+<path d="M73 149Q85 163 97 149Z" fill="#fff" stroke="#8a3d3d" stroke-width="1.5"/>
+<path d="M37 108C32 58 62 44 85 44S138 58 133 108C128 86 112 74 85 74S42 86 37 108Z" fill="#1d1d22"/>
+<ellipse cx="55" cy="130" rx="7" ry="4" fill="#ff8fa3" opacity=".4"/><ellipse cx="115" cy="130" rx="7" ry="4" fill="#ff8fa3" opacity=".4"/>
+<g fill="rgba(255,255,255,.35)" stroke="#2b2b33" stroke-width="3"><circle cx="65" cy="114" r="14"/><circle cx="105" cy="114" r="14"/><path d="M79 112Q85 108 91 112" fill="none"/></g>
+<g class="eyes" fill="#222"><circle cx="68" cy="116" r="3.6"/><circle cx="108" cy="116" r="3.6"/></g>
+<path d="M54 94Q65 89 76 94M94 94Q105 89 116 94" stroke="#1d1d22" stroke-width="3" fill="none" stroke-linecap="round"/>
+<g id="phoneB" transform="rotate(10 172 148)"><rect x="147" y="104" width="50" height="88" rx="10" fill="#2b2f42"/><rect x="151.5" y="110" width="41" height="76" rx="6" fill="url(#sB)"/>
+<rect x="156" y="118" width="22" height="9" rx="4.5" fill="#bcd8ff"/><rect x="166" y="131" width="22" height="9" rx="4.5" fill="#ff9bb8"/><rect x="156" y="144" width="16" height="9" rx="4.5" fill="#bcd8ff"/>
+<g fill="#8f9ac0"><circle class="td" cx="162" cy="168" r="2.6"/><circle class="td" cx="170" cy="168" r="2.6"/><circle class="td" cx="178" cy="168" r="2.6"/></g></g>
+<circle cx="165" cy="192" r="11" fill="#f6d2b0"/><ellipse cx="150" cy="178" rx="5" ry="8" fill="#f6d2b0"/>
+</svg></section>
+
+<section class="card"><div id="panel"></div><div id="dots"></div></section>
+
+<section class="side girl">
+<svg class="avatar" viewBox="0 0 220 270" role="img" aria-label="A smiling girl texting"><g transform="translate(220 0) scale(-1 1)">
+<defs><linearGradient id="sG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#ffdce8"/></linearGradient></defs>
+<path d="M10 272C10 215 40 192 85 192S160 215 160 272Z" fill="#d9b290"/>
+<path d="M11 246Q85 232 159 246" stroke="#fff" stroke-width="8" fill="none"/>
+<rect x="73" y="158" width="24" height="40" rx="10" fill="#efc3a4"/>
+<path d="M65 193Q85 212 105 193" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+<path d="M34 112C26 60 56 36 85 36S144 60 136 112L120 130H50Z" fill="#7b4b2a"/>
+<path d="M34 112C24 150 28 185 20 210C42 218 56 205 56 190V120Z" fill="#7b4b2a"/><path d="M136 112C146 150 142 185 150 210C128 218 114 205 114 190V120Z" fill="#7b4b2a"/>
+<path d="M36 135Q31 165 36 192M134 135Q139 165 134 192" stroke="#e0ae62" stroke-width="5" stroke-linecap="round" fill="none"/>
+<path d="M130 208L160 198" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+<ellipse cx="85" cy="114" rx="45" ry="47" fill="#f7d6bf"/>
+<path d="M40 108C38 66 66 52 86 52S134 66 130 108C124 88 108 80 92 78C84 92 62 98 40 108Z" fill="#7b4b2a"/>
+<path d="M60 62Q56 80 48 98M92 56Q96 70 88 80M118 66Q124 84 128 100" stroke="#e0ae62" stroke-width="5" stroke-linecap="round" fill="none"/>
+<ellipse cx="55" cy="132" rx="8" ry="5" fill="#ff8fa3" opacity=".45"/><ellipse cx="115" cy="132" rx="8" ry="5" fill="#ff8fa3" opacity=".45"/>
+<g class="eyes"><ellipse cx="66" cy="118" rx="6" ry="7.5" fill="#2a1d1d"/><ellipse cx="106" cy="118" rx="6" ry="7.5" fill="#2a1d1d"/><circle cx="68" cy="115" r="2.2" fill="#fff"/><circle cx="108" cy="115" r="2.2" fill="#fff"/></g>
+<path d="M57 108Q61 105 64 107M115 108Q111 105 108 107" stroke="#2a1d1d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M72 136Q85 154 98 136Z" fill="#c94a5e"/>
+<g id="phoneG" transform="rotate(10 172 148)"><rect x="147" y="104" width="50" height="88" rx="10" fill="#f08aa6"/><rect x="151.5" y="110" width="41" height="76" rx="6" fill="url(#sG)"/>
+<rect x="156" y="118" width="22" height="9" rx="4.5" fill="#ffc2d9"/><rect x="166" y="131" width="22" height="9" rx="4.5" fill="#bcd8ff"/><rect x="156" y="144" width="16" height="9" rx="4.5" fill="#ffc2d9"/>
+<g fill="#c28aa0"><circle class="td" cx="162" cy="168" r="2.6"/><circle class="td" cx="170" cy="168" r="2.6"/><circle class="td" cx="178" cy="168" r="2.6"/></g></g>
+<circle cx="165" cy="192" r="11" fill="#f7d6bf"/><ellipse cx="150" cy="178" rx="5" ry="8" fill="#f7d6bf"/>
+</g></svg></section>
+</main>
+
+<script>
+/* ====== EDIT ME ====== */
+const CONFIG = {
+  PDF_FILE: "Ticket.pdf",              // the surprise file (keep it next to index.html)
+  PDF_NAME: "Surprise-for-you.pdf",    // name it gets when she downloads it
+  FORM_ENDPOINT: ""                    // optional: Formspree URL so her answers get emailed to you (see README)
+};
+/* ===================== */
+const $=s=>document.querySelector(s), sleep=ms=>new Promise(r=>setTimeout(r,ms)), lerp=(a,b,t)=>a+(b-a)*t;
+const panel=$('#panel'), answers={};
+const save=(k,v)=>{answers[k]=v;try{localStorage.setItem('parisa-answers',JSON.stringify(answers))}catch(e){}};
+
+/* sunrise */
+const KF=[[0,'#141040','#4a3a82','#e98a9d','#2a1f4d','#3a2a60','#ff6a4d'],[.2,'#2a2a6e','#8a5a9e','#ffa07a','#3a2d66','#51407a','#ff7a4d'],[.4,'#5b5aa8','#f08fa6','#ffbe7b','#4b4a7c','#6a5a8c','#ff9a55'],[.6,'#7aa6e6','#ffc3a8','#ffd98a','#5b9a6f','#74ab7a','#ffbf4d'],[.8,'#8fd0ff','#ffe0c2','#fff0b3','#6cb872','#86c985','#ffd84d'],[1,'#aee3ff','#d9f1ff','#fff7d6','#78c27a','#95d68c','#ffe27a']];
+const hx=h=>[1,3,5].map(i=>parseInt(h.substr(i,2),16));
+const mix=(a,b,t)=>'rgb('+hx(a).map((v,i)=>Math.round(lerp(v,hx(b)[i],t))).join()+')';
+let cur=0,target=0;
+function sky(p){
+  let i=0;while(i<KF.length-2&&p>KF[i+1][0])i++;
+  const a=KF[i],b=KF[i+1],t=Math.min(1,Math.max(0,(p-a[0])/(b[0]-a[0]))),s=document.documentElement.style;
+  ['--top','--mid','--bot','--h1','--h2','--sunc'].forEach((n,k)=>s.setProperty(n,mix(a[k+1],b[k+1],t)));
+  const H=innerHeight,e=1-Math.pow(1-p,2.2);
+  $('#sun').style.transform='translateY('+lerp(H*.9,H*.04,e)+'px)';
+  $('#stars').style.opacity=Math.max(0,1-p*2.4);
+}
+for(let i=0;i<60;i++){const s=document.createElement('i');s.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*60+'%;animation-delay:-'+Math.random()*3+'s';$('#stars').appendChild(s)}
+
+/* line between the phones, with traveling hearts */
+const stage=$('#stage'),lp=$('#lp'),link=$('#link'),NS='http://www.w3.org/2000/svg';
+const hearts=[0,1,2,3].map(()=>{const t=document.createElementNS(NS,'text');t.textContent='💗';link.appendChild(t);return t});
+let rate=1;
+function drawLink(t){
+  const s=stage.getBoundingClientRect(),a=$('#phoneB').getBoundingClientRect(),b=$('#phoneG').getBoundingClientRect();
+  const x1=a.left+a.width/2-s.left,y1=a.top-s.top+6,x2=b.left+b.width/2-s.left,y2=b.top-s.top+6,cy=(16-.125*(y1+y2))/.75;
+  lp.setAttribute('d','M'+x1+','+y1+' C'+x1+','+cy+' '+x2+','+cy+' '+x2+','+y2);
+  const L=lp.getTotalLength();
+  hearts.forEach((h,i)=>{let u=(t*rate/5200+i/4)%1;if(i%2)u=1-u;const p=lp.getPointAtLength(u*L);h.setAttribute('x',p.x);h.setAttribute('y',p.y);h.style.opacity=Math.sin(u*Math.PI)});
+}
+function tick(t){
+  if(Math.abs(target-cur)>.0003){cur+=(target-cur)*.045;sky(cur)}
+  drawLink(t);requestAnimationFrame(tick);
+}
+addEventListener('resize',()=>sky(cur));
+
+/* effects */
+function burst(x,y,n=8,pool=['💖','💕','💗','✨','😍']){
+  for(let i=0;i<n;i++){const e=document.createElement('span');e.className='fx';e.textContent=pool[Math.random()*pool.length|0];
+  e.style.cssText='left:'+x+'px;top:'+y+'px;animation-delay:'+i*40+'ms;--dx:'+(Math.random()*160-80)+'px;--r:'+(Math.random()*60-30)+'deg;--s:'+(16+Math.random()*16)+'px';
+  document.body.appendChild(e);e.addEventListener('animationend',()=>e.remove())}
+}
+const mid=el=>{const r=el.getBoundingClientRect();return[r.left+r.width/2,r.top+r.height/2]};
+
+/* the 7 steps */
+const dots=$('#dots');for(let i=0;i<7;i++)dots.appendChild(document.createElement('i'));
+let step=0,busy=false;
+const steps=[intro,miss,mood,happy,surprise,plan,final];
+async function go(n){
+  if(busy)return;busy=true;
+  panel.classList.remove('in');panel.classList.add('out');await sleep(380);
+  step=n;target=n/6;steps[n]();
+  [...dots.children].forEach((d,i)=>d.classList.toggle('on',i<=n));
+  panel.classList.remove('out');void panel.offsetWidth;panel.classList.add('in');busy=false;
+}
+const next=()=>go(step+1);
+
+function intro(){
+  panel.innerHTML='<div class="big-emo emo">🌅</div><p class="love">Meet a new day, sweetheart! I promise to fill it with my unconditional love, hours of laughter and endless happiness!</p><button class="emoji-btn blink" id="b" aria-label="Tap to continue">😍</button><p class="hint">tap me 👆</p>';
+  $('#b').onclick=e=>{burst(...mid(e.target),10);$('#b').disabled=true;next()};
+}
+
+function missColor(v){const t=Math.abs(v)/100;return v<0?`hsl(212,${25+t*55}%,${80-t*28}%)`:`hsl(${340+t*18},${25+t*65}%,${80-t*30}%)`}
+const FACES=[[-71,'🥶','Ice age… are you sure? ❄️'],[-41,'😤','Cold as winter 🧊'],[-11,'😐','Meh… 😏'],[10,'🙂','Hmm… undecided 🤔'],[40,'😊','A little bit 🌱'],[70,'🥰','Quite a lot 🥰'],[95,'😍','So much 💕'],[101,'😻','To infinity and beyond! 🚀']];
+function miss(){
+  panel.innerHTML='<h2>Hi my dear Parisa,<br>How much do you miss me ?</h2><div class="meter"><div id="bub" class="emo">🙂</div><input id="r" type="range" min="-100" max="100" step="1" value="0" aria-label="How much do you miss me"><div class="scale"><span>-100</span><span>0</span><span>100</span></div></div><div class="read"><b id="v">0</b> <span id="l"></span></div><button class="btn" id="b">This much</button>';
+  const r=$('#r'),bub=$('#bub');let lastE='',lastT=0;
+  const upd=()=>{
+    const v=+r.value,pos=(v+100)/2,c=missColor(v),a=Math.min(pos,50),b=Math.max(pos,50),f=FACES.find(f=>v<f[0]);
+    r.style.setProperty('--c',c);panel.style.setProperty('--c',c);
+    r.style.setProperty('--track',`linear-gradient(to right,var(--rail) ${a}%,${c} ${a}% ${b}%,var(--rail) ${b}%)`);
+    bub.style.left=`calc(${pos}% + ${(.5-pos/100)*34}px)`;
+    if(f[1]!==lastE){bub.textContent=lastE=f[1];bub.classList.remove('pop');void bub.offsetWidth;bub.classList.add('pop')}
+    $('#v').textContent=v;$('#l').textContent=f[2];
+    const n=Date.now();if(n-lastT>150&&(v>=70||v<=-80)){lastT=n;burst(...mid(bub),1,v>0?['💖','💕','💗']:['❄️'])}
+  };
+  r.oninput=upd;upd();
+  $('#b').onclick=async()=>{
+    $('#b').disabled=true;save('missYou',+r.value);
+    panel.classList.add('out');await sleep(350);
+    panel.innerHTML='<div class="big-emo emo">🥹</div><h2>But I can’t tell you with a number…</h2><p class="hint">(my missing you doesn’t fit on a slider 💗)</p>';
+    panel.classList.remove('out');await sleep(2800);next();
+  };
+}
+
+const MOODS=[['🥺','🌧️','Rainy day','Aww, come here… sending you a giant hug 🤗'],['🙂','☁️','Cloudy-ish','Okay, okay… let’s bring the sun out 🌤️'],['😊','☀️','Sunny','Yay, sunshine! ☀️'],['🥳','🌈','Rainbow & glitter','Of course! You’re glowing ✨']];
+function mood(){
+  panel.innerHTML='<h2>How is your mood today?</h2><div class="grid">'+MOODS.map((m,i)=>`<button class="mood" data-i="${i}"><span class="mwx">${m[1]}</span><span class="mface">${m[0]}</span>${m[2]}</button>`).join('')+'</div><p class="hint" id="re">&nbsp;</p>';
+  panel.querySelectorAll('.mood').forEach(b=>b.onclick=async()=>{
+    panel.querySelectorAll('.mood').forEach(x=>x.disabled=true);
+    const m=MOODS[b.dataset.i];save('mood',m[2]);$('#re').textContent=m[3];burst(...mid(b),6,[m[0],m[1],'💕']);
+    await sleep(1700);next();
+  });
+}
+
+function happy(){
+  panel.innerHTML='<h2>What makes you happy today?</h2><textarea id="t" rows="2" maxlength="120" placeholder="Type your answer here…" aria-label="What makes you happy today"></textarea><button class="btn" id="b">Send 💌</button>';
+  const t=$('#t'),send=async()=>{
+    const text=t.value.trim();
+    if(!text){t.classList.remove('shake');void t.offsetWidth;t.classList.add('shake');return}
+    panel.innerHTML='<h2>What makes you happy today?</h2><div class="me" id="m"></div><div class="status" id="s"></div>';
+    const m=$('#m'),s=$('#s');m.textContent=text;      // (her answer is never saved)
+    await sleep(900);s.textContent='✏️ Autocorrect is checking your answer…';
+    await sleep(1500);m.classList.add('wrong');s.textContent='🧐 Hmm… that doesn’t look right.';
+    await sleep(1200);
+    const ch=[...text],sp=Math.max(18,Math.min(70,1300/ch.length));
+    while(ch.length){ch.pop();m.textContent=ch.join('');await sleep(sp)}
+    await sleep(350);m.classList.remove('wrong');m.classList.add('big');
+    for(const c of 'YOU'){m.textContent+=c;burst(...mid(m),2);await sleep(300)}
+    s.innerHTML='✅ Autocorrect fixed it.<br><b>Correct answer.</b> 😏💘';burst(...mid(m),10);
+    await sleep(2800);next();
+  };
+  $('#b').onclick=send;t.onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}};
+}
+
+function surprise(){
+  panel.innerHTML='<div class="big-emo emo">🎁</div><p class="love">So I have a surprise for you, I hope it makes you happy. Click Open button!</p><button class="btn blink" id="b" style="animation-duration:1.6s">Open</button>';
+  $('#b').onclick=async()=>{
+    const a=document.createElement('a');a.href=CONFIG.PDF_FILE;a.download=CONFIG.PDF_NAME;document.body.appendChild(a);a.click();a.remove();
+    panel.classList.add('out');await sleep(350);
+    panel.innerHTML='<div class="big-emo emo">💖💕😘</div><p class="love">Surprise! check that</p><button class="emoji-btn blink" id="n" aria-label="Continue">💖</button><p class="hint"><a href="'+CONFIG.PDF_FILE+'" download style="color:inherit">Nothing downloaded? Tap here</a></p>';
+    panel.classList.remove('out');burst(...mid(panel),14);
+    $('#n').onclick=e=>{burst(...mid(e.target),10);next()};
+  };
+}
+
+const PLANS=[['☕','Cafe'],['🥗','Salad bar'],['🎾','Padel'],['🚶‍♀️','Walking'],['✨','Let us not be limited to these few items']];
+function plan(){
+  panel.innerHTML='<h2>What do you wanna do, when we meet next time ?</h2><div class="opts">'+PLANS.map(p=>`<button class="opt"><span class="emo">${p[0]}</span> ${p[1]}</button>`).join('')+'</div>';
+  panel.querySelectorAll('.opt').forEach((b,i)=>b.onclick=async()=>{
+    panel.querySelectorAll('.opt').forEach(x=>x.disabled=true);b.classList.add('sel');
+    save('nextMeeting',PLANS[i][1]);burst(...mid(b),8);await sleep(900);next();
+  });
+}
+
+const FINAL=['Ok my love. I wish you a great day.','I can’t wait to see you, to get lost in your eyes and forget about everything else in the world.','If only you knew how beautiful your eyes are… They’re the kind of beauty I could stare at forever and never get tired of.','And in the heart of our homeland’s capital, you are, without a doubt, the most beautiful sight my eyes could ever hope to behold.','I love you more than words could ever express, and if I could choose a thousand times, in a thousand different lives, my heart would find its way to you every single time❤️','Goodbye for now. I’ll be thinking of you'];
+function final(){
+  panel.innerHTML='<div class="final">'+FINAL.map((t,i)=>`<p style="animation-delay:${i*1.4}s">${t}</p>`).join('')+'</div>';
+  rate=2.5;
+  FINAL.forEach((_,i)=>setTimeout(()=>burst(innerWidth/2,innerHeight*.6,5),i*1400+500));
+  save('finishedAt',new Date().toISOString());
+  if(CONFIG.FORM_ENDPOINT)fetch(CONFIG.FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(answers)}).catch(()=>{});
+}
+
+/* start (?step=3 jumps to a step for testing, ?reset clears saved answers) */
+const q=new URLSearchParams(location.search);
+if(q.has('reset'))try{localStorage.removeItem('parisa-answers')}catch(e){}
+step=Math.min(6,Math.max(0,+q.get('step')||0));target=step/6;steps[step]();
+[...dots.children].forEach((d,i)=>d.classList.toggle('on',i<=step));
+sky(0);requestAnimationFrame(tick);
+</script>
+</body>
+</html>
