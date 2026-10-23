@@ -85,8 +85,9 @@ textarea.shake,.shake{animation:shk .4s}
 .me.wrong{background:#9a8fb0;animation:shk .4s 2}
 .me.big{font-size:2.6rem;letter-spacing:4px;transform:rotate(-3deg)}
 .status{min-height:3em;font-size:1rem;opacity:.85}
-.final{text-align:left;font:500 1.04rem/1.6 'Fredoka',sans-serif;display:flex;flex-direction:column;gap:10px}
-.final p{margin:0;opacity:0;animation:pin 1s forwards}
+.final-message{width:100%;max-height:62vh;overflow-y:auto;text-align:center;font:500 1.02rem/1.7 'Nunito','Segoe UI',sans-serif;color:var(--plum);white-space:normal;overflow-wrap:anywhere;padding:4px 8px}
+.final-message p{margin:0;opacity:1;animation:none}
+@media(max-width:860px){.final-message{max-height:55vh;font-size:.96rem;line-height:1.6}}
 .fx{position:fixed;z-index:60;pointer-events:none;font-size:var(--s,22px);animation:up 1.6s ease-out forwards}
 @keyframes up{0%{opacity:0;transform:scale(.6)}15%{opacity:1}100%{opacity:0;transform:translate(var(--dx),-130px) scale(1.2) rotate(var(--r))}}
 @media(max-width:860px){.stage{grid-template-columns:1fr 1fr;grid-template-areas:"b g" "c c";gap:12px;padding-top:84px}.boy{grid-area:b;height:200px}.girl{grid-area:g;height:200px}.card{grid-area:c}.avatar{max-width:165px}h2{font-size:1.35rem}.love{font-size:1.25rem}}
@@ -102,54 +103,50 @@ textarea.shake,.shake{animation:shk .4s}
 <svg id="link" aria-hidden="true"><path id="lp"/></svg>
 
 <section class="side boy">
-<svg class="avatar" viewBox="0 0 220 270" role="img" aria-label="Illustrated man with round glasses, dark beard and a light blue shirt">
-  <defs>
-    <linearGradient id="boyShirt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6f0f7"/><stop offset="1" stop-color="#9dbbd1"/></linearGradient>
-    <linearGradient id="boySkin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1c6a9"/><stop offset="1" stop-color="#d99e82"/></linearGradient>
-    <linearGradient id="boyHair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25212a"/><stop offset="1" stop-color="#090b12"/></linearGradient>
-  </defs>
-  <path d="M22 270Q28 211 68 194L91 185H127L153 198Q190 218 198 270Z" fill="url(#boyShirt)"/>
-  <path d="M77 193L91 220L111 236L132 207L126 187H86Z" fill="#d8a88f"/>
-  <path d="M76 193L95 216L111 235L128 209L139 198L158 211L139 270H59L46 213Z" fill="url(#boyShirt)"/>
-  <path d="M94 211L111 235L128 211L120 204H102Z" fill="#f7fbff"/>
-  <path d="M78 78Q82 42 117 44Q151 47 153 87L149 128Q145 160 117 166Q88 160 79 130Z" fill="url(#boySkin)"/>
-  <path d="M74 105Q58 66 81 43Q101 21 132 37Q163 50 155 91L147 108L140 79Q118 83 98 70Q91 90 74 105Z" fill="url(#boyHair)"/>
-  <path d="M77 102Q76 128 91 147Q102 160 117 160Q137 157 146 135L149 111Q138 126 125 128Q99 128 88 109Z" fill="#17141b" opacity=".92"/>
-  <path d="M87 124Q99 134 109 129Q120 135 136 123L133 143Q119 159 104 150Q91 143 87 124Z" fill="#26212a"/>
-  <path d="M91 130Q99 137 107 133M119 134Q128 136 134 129" fill="none" stroke="#4b3434" stroke-width="2" stroke-linecap="round"/>
-  <path d="M104 115Q111 120 116 115" fill="none" stroke="#9a6257" stroke-width="2" stroke-linecap="round"/>
-  <g stroke="#282631" stroke-width="4" fill="rgba(230,245,255,.25)">
-    <circle cx="96" cy="106" r="15"/><circle cx="132" cy="106" r="15"/><path d="M111 104Q114 101 117 104" fill="none"/>
-  </g>
-  <g class="eyes" fill="#28202a"><ellipse cx="97" cy="107" rx="3.2" ry="4"/><ellipse cx="131" cy="107" rx="3.2" ry="4"/></g>
-  <path d="M82 91Q95 85 106 91M121 91Q133 85 144 92" stroke="#17141b" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M68 270L75 225L93 238L110 270M155 270L146 225L128 239L111 270" fill="#c5d8e6" opacity=".7"/>
+<svg class="avatar" viewBox="0 0 220 270" role="img" aria-label="Cute original cartoon boy avatar">
+ <defs><linearGradient id="bshirt" x2="0" y2="1"><stop stop-color="#b9e6ed"/><stop offset="1" stop-color="#78b8ce"/></linearGradient><linearGradient id="bskin" x2="0.8" y2="1"><stop stop-color="#ffd9b8"/><stop offset="1" stop-color="#edb38e"/></linearGradient></defs>
+ <ellipse cx="110" cy="260" rx="76" ry="10" fill="#8fb7d2" opacity=".25"/>
+ <path d="M25 270Q33 211 75 198L93 190H128L147 198Q187 218 195 270Z" fill="url(#bshirt)"/>
+ <path d="M88 185H132L138 211L110 239L82 211Z" fill="#f8fcff"/><path d="M95 187L110 203L125 187" fill="none" stroke="#a3c7d7" stroke-width="3"/>
+ <rect x="96" y="164" width="28" height="35" rx="12" fill="url(#bskin)"/>
+ <path d="M65 90Q64 47 108 43Q153 43 157 91L150 133Q142 168 111 171Q78 165 70 132Z" fill="url(#bskin)"/>
+ <!-- fluffy, swoopy chestnut hair -->
+ <path d="M64 105Q48 82 63 59Q70 40 92 40Q104 22 126 35Q151 31 160 56Q174 76 154 105L145 87Q126 95 111 78Q95 96 76 91Z" fill="#604033"/>
+ <path d="M75 65Q91 45 110 51Q125 42 145 59Q127 56 116 68Q97 78 81 78Z" fill="#8b5b43"/>
+ <!-- soft little beard/stubble, not a solid block -->
+ <path d="M74 124Q78 151 96 160Q111 169 126 159Q143 150 147 124Q137 139 127 139Q111 146 94 139Q82 137 74 124Z" fill="#604238" opacity=".78"/>
+ <g fill="#342a29"><ellipse cx="91" cy="111" rx="4" ry="5"/><ellipse cx="130" cy="111" rx="4" ry="5"/></g>
+ <g fill="none" stroke="#5a3b32" stroke-width="3.5" stroke-linecap="round"><path d="M80 101Q90 94 100 101M120 101Q130 94 140 101"/></g>
+ <path d="M104 124Q110 128 116 124" fill="none" stroke="#c27d70" stroke-width="2.5" stroke-linecap="round"/>
+ <path d="M96 144Q110 152 124 144" fill="none" stroke="#f5c0b2" stroke-width="3" stroke-linecap="round"/>
+ <ellipse cx="80" cy="124" rx="8" ry="5" fill="#f18d91" opacity=".45"/><ellipse cx="141" cy="124" rx="8" ry="5" fill="#f18d91" opacity=".45"/>
+ <g fill="none" stroke="#3b343a" stroke-width="4"><circle cx="91" cy="111" r="17"/><circle cx="130" cy="111" r="17"/><path d="M108 110H113"/></g>
+ <path d="M48 270L64 225L84 238L101 270M172 270L156 225L136 238L119 270" fill="#d7f0f1" opacity=".6"/>
+ <path d="M49 223Q64 212 78 216" fill="none" stroke="#fff" stroke-width="4" opacity=".7"/>
 </svg></section>
 
 <section class="card"><div id="panel"></div><div id="dots"></div></section>
 
 <section class="side girl">
-<svg class="avatar" viewBox="0 0 220 270" role="img" aria-label="Illustrated woman with long brown hair and a brown-and-white checked outfit">
-  <defs>
-    <linearGradient id="girlSkin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7d7c3"/><stop offset="1" stop-color="#e5ae94"/></linearGradient>
-    <linearGradient id="girlHair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5a3529"/><stop offset=".55" stop-color="#39251f"/><stop offset="1" stop-color="#75472f"/></linearGradient>
-    <pattern id="checks" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f4eee3"/><path d="M0 0H14V14" fill="none" stroke="#8a6046" stroke-width="4"/><path d="M7 0V14M0 7H14" stroke="#c8a98d" stroke-width="1.5"/></pattern>
-  </defs>
-  <path d="M23 270Q30 218 69 198L91 187H128L154 199Q188 218 198 270Z" fill="#f0e6d8"/>
-  <path d="M75 193L89 220L111 236L133 211L127 185H87Z" fill="url(#girlSkin)"/>
-  <path d="M71 194L90 213L111 237L132 213L151 204L174 270H47L53 212Z" fill="url(#checks)" stroke="#d2b59d" stroke-width="1"/>
-  <path d="M91 212L111 237L131 212L121 204H101Z" fill="#fff7ed"/>
-  <path d="M72 92Q62 45 99 31Q139 19 156 57Q165 82 155 135L160 190Q145 215 132 193L135 117Z" fill="url(#girlHair)"/>
-  <path d="M77 78Q77 43 108 40Q143 38 150 77L146 126Q139 157 113 161Q88 157 80 128Z" fill="url(#girlSkin)"/>
-  <path d="M75 91Q64 58 88 39Q111 19 137 36Q159 49 153 83L144 96Q132 77 119 71Q100 87 75 91Z" fill="url(#girlHair)"/>
-  <path d="M78 83Q71 116 82 143L72 176Q63 194 51 183L61 121Z" fill="url(#girlHair)"/>
-  <path d="M145 83Q157 119 150 153L163 181Q174 195 183 180L164 119Z" fill="url(#girlHair)"/>
-  <path d="M90 105Q99 100 106 105M121 105Q129 100 137 105" stroke="#4a3028" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <g class="eyes" fill="#4a3028"><ellipse cx="99" cy="111" rx="3.5" ry="4.2"/><ellipse cx="128" cy="111" rx="3.5" ry="4.2"/></g>
-  <path d="M111 111L108 124L114 125" fill="none" stroke="#c98976" stroke-width="2" stroke-linecap="round"/>
-  <path d="M104 135Q113 142 123 134" fill="none" stroke="#b65e66" stroke-width="2.5" stroke-linecap="round"/>
-  <ellipse cx="91" cy="126" rx="7" ry="4" fill="#e9898e" opacity=".4"/><ellipse cx="137" cy="126" rx="7" ry="4" fill="#e9898e" opacity=".4"/>
-  <path d="M54 270L68 224L88 239L108 270M170 270L153 224L132 239L112 270" fill="#e7d6c2" opacity=".55"/>
+<svg class="avatar" viewBox="0 0 220 270" role="img" aria-label="Cute original cartoon girl avatar">
+ <defs><linearGradient id="gskin" x2="0.8" y2="1"><stop stop-color="#ffe0c9"/><stop offset="1" stop-color="#efb99e"/></linearGradient><pattern id="gcheck" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#fff8ed"/><path d="M0 0H16M0 0V16" stroke="#9b6b4f" stroke-width="3"/><path d="M8 0V16M0 8H16" stroke="#d4b49a" stroke-width="1.3"/></pattern></defs>
+ <ellipse cx="110" cy="260" rx="76" ry="10" fill="#d9a4ba" opacity=".24"/>
+ <path d="M24 270Q32 214 73 198L92 190H128L149 199Q188 219 196 270Z" fill="#fff1e4"/>
+ <path d="M83 188H137L143 210L110 239L77 210Z" fill="#ffe0c9"/>
+ <path d="M73 198L91 210L110 239L130 210L148 198L174 270H46Z" fill="url(#gcheck)"/>
+ <path d="M94 209L110 239L126 209L119 204H101Z" fill="#fffdf8"/>
+ <rect x="96" y="164" width="28" height="36" rx="12" fill="url(#gskin)"/>
+ <!-- long flowing cocoa-brown hair -->
+ <path d="M65 103Q49 58 79 35Q103 15 131 31Q162 35 162 78L158 157Q161 187 144 199Q130 200 132 176L136 103Z" fill="#553629"/>
+ <path d="M77 73Q75 43 103 39Q135 33 148 63L145 127Q139 163 111 168Q82 163 76 130Z" fill="url(#gskin)"/>
+ <path d="M72 88Q61 55 86 36Q108 18 133 34Q154 45 151 78L143 91Q130 70 114 66Q95 85 72 88Z" fill="#684331"/>
+ <path d="M75 78Q68 112 78 143L70 178Q64 192 53 181L61 119Z" fill="#684331"/><path d="M145 82Q158 116 151 151L163 180Q171 190 180 179L163 119Z" fill="#684331"/>
+ <path d="M88 105Q97 99 104 105M119 105Q128 99 136 105" fill="none" stroke="#704737" stroke-width="3" stroke-linecap="round"/>
+ <g class="eyes" fill="#4a3028"><ellipse cx="97" cy="112" rx="3.6" ry="4.5"/><ellipse cx="128" cy="112" rx="3.6" ry="4.5"/></g>
+ <path d="M109 114L106 124L112 126" fill="none" stroke="#d28d7b" stroke-width="2" stroke-linecap="round"/>
+ <path d="M100 137Q111 146 123 136" fill="none" stroke="#bf6871" stroke-width="3" stroke-linecap="round"/>
+ <ellipse cx="85" cy="126" rx="8" ry="5" fill="#f28f9b" opacity=".5"/><ellipse cx="140" cy="126" rx="8" ry="5" fill="#f28f9b" opacity=".5"/>
+ <path d="M51 270L67 226L88 241L104 270M169 270L153 226L132 241L116 270" fill="#fff5e9" opacity=".6"/>
 </svg></section>
 </main>
 
@@ -296,11 +293,12 @@ function plan(){
   });
 }
 
-const FINAL=['Ok my love. I wish you a great day.','I can’t wait to see you, to get lost in your eyes and forget about everything else in the world.','If only you knew how beautiful your eyes are… They’re the kind of beauty I could stare at forever and never get tired of.','And in the heart of our homeland’s capital, you are, without a doubt, the most beautiful sight my eyes could ever hope to behold.','I love you more than words could ever express, and if I could choose a thousand times, in a thousand different lives, my heart would find its way to you every single time❤️',"Goodbye for now. I’ll be thinking of you"];
+const FINAL_TEXT = "Ok my love. I wish you a great day. I can’t wait to see you, to get lost in your eyes and forget about everything else in the world. If only you knew how beautiful your eyes are… They’re the kind of beauty I could stare at forever and never get tired of. And in the heart of our homeland’s capital, you are, without a doubt, the most beautiful sight my eyes could ever hope to behold. I love you more than words could ever express, and if I could choose a thousand times, in a thousand different lives, my heart would find its way to you every single time❤️ Goodbye for now. I’ll be thinking of you";
 function final(){
-  panel.innerHTML='<div class="final">'+FINAL.map((t,i)=>`<p style="animation-delay:${i*1.4}s">${t}</p>`).join('')+'</div>';
+  panel.innerHTML = '<div class="final-message"><p></p></div>';
+  panel.querySelector('.final-message p').textContent = FINAL_TEXT;
   rate=2.5;
-  FINAL.forEach((_,i)=>setTimeout(()=>burst(innerWidth/2,innerHeight*.6,5),i*1400+500));
+  burst(innerWidth/2,innerHeight*.6,12);
   save('finishedAt',new Date().toISOString());
   if(CONFIG.FORM_ENDPOINT)fetch(CONFIG.FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(answers)}).catch(()=>{});
 }
